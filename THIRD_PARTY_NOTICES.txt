@@ -1,0 +1,19 @@
+AdAway default blocklist
+Source: https://github.com/AdAway/adaway.github.io/
+File: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+Credited authors: Kicelo, Dominik Schuermann, and the project's contributors
+History: https://github.com/AdAway/adaway.github.io/commits/master
+License: Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+License text: https://creativecommons.org/licenses/by/3.0/legalcode
+
+The source file and its notices are preserved in vendor/adaway/hosts.txt.
+Adaptations by Addblock: conversion from hosts format to Chrome rules,
+removal of local entries and duplicates, and addition of locally maintained
+domains. Chrome rules also cover subdomains of the listed names. This
+adaptation of the list remains under CC BY 3.0. No endorsement by AdAway
+is claimed. The SHA-256 checksum and counts are in rules/sources.json.
+
+Playwright (development dependency only)
+https://github.com/microsoft/playwright — Apache-2.0
+
+No files were copied from sarthak-here/addblocker.

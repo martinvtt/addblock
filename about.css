@@ -1,0 +1,8 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #213b32; background: #f5f6f1; }
+body { margin: 0; padding: 36px 24px; }
+main { max-width: 760px; margin: auto; line-height: 1.7; }
+.brand { letter-spacing: .18em; font-weight: 700; }
+h1 { font-size: 2rem; line-height: 1.2; }
+h2 { margin-top: 2rem; font-size: 1.2rem; }
+a { color: #245b48; text-underline-offset: .2em; }
+a:focus-visible { outline: 3px solid #b98126; outline-offset: 4px; }

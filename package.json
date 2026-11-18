@@ -1,0 +1,23 @@
+{
+  "name": "addblock",
+  "version": "0.5.1",
+  "private": true,
+  "description": "Local checks and release tooling for the Addblock Chrome extension",
+  "scripts": {
+    "test": "npm run check && npm run test:network && npm run test:cosmetics && npm run test:outlook && npm run test:popups && npm run test:demo && npm run test:release",
+    "test:demo": "node tests/demo.cjs",
+    "check": "python3 scripts/filters.py --check && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "filters:build": "python3 scripts/filters.py",
+    "filters:update": "python3 scripts/filters.py --update",
+    "test:cosmetics": "node tests/cosmetics.cjs",
+    "test:network": "node tests/network.cjs",
+    "test:popups": "node tests/popups.cjs",
+    "release": "python3 scripts/release.py",
+    "test:release": "node tests/release.cjs",
+    "test:outlook": "node tests/outlook.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1"
+  },
+  "license": "MIT"
+}

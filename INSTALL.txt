@@ -1,0 +1,27 @@
+Addblock 0.5.1 — Chrome and Microsoft Edge installation
+
+Open INSTALL.html for the illustrated step-by-step guide.
+
+1. Extract this ZIP into a permanent folder (do not load the ZIP itself).
+2. In Chrome, open chrome://extensions; in Edge, open edge://extensions.
+   Enable Developer mode.
+3. Choose Load unpacked and select the extracted folder containing manifest.json.
+4. Pin Addblock and reload the websites you want to protect.
+
+To update an existing copy: extract the update over the same installation folder,
+click Reload on Addblock in chrome://extensions, and reload your websites.
+Using a different installation folder can create a second extension with separate
+settings. Do not run both copies at once.
+
+If a site breaks, open Addblock, choose Autoriser ce site, then reload the page.
+To pause all filtering, select Mettre en pause partout. To remove Addblock, choose
+Remove in chrome://extensions.
+
+The interface is in French. Network detail and simulated diagnostics are reserved
+for the source/development build. The distribution retains network blocking,
+the native Chrome request-count badge, cosmetic filtering, and popup protection.
+No Node.js, npm, Python, account, or server is needed to use the extension.
+
+This ZIP is not a Chrome Web Store listing. Blocking is based on known domains
+and heuristics, not image analysis; some ads can remain and legitimate popups
+can occasionally be blocked. See the Sources et vie privee page in the extension.

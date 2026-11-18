@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Addblock</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m12 3 8 3v6c0 4-5 8-8 9-3-1-8-5-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg>
+        </span>
+        <span>Addblock<span class="brand-subtitle">Votre espace, plus serein.</span></span>
+      </div>
+      <span class="badge" id="badge">CHARGEMENT</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <span class="eyebrow"><span class="dot"></span> FILTRAGE PUBLICITAIRE</span>
+        <h1 id="title">Moins de bruit.<br>Plus de tranquillité.</h1>
+        <div class="status">
+          <span class="status-icon" aria-hidden="true">i</span>
+          <div><h2 id="status-title">Lecture de la protection…</h2><p id="status-detail">Connexion au moteur de filtrage de Chrome.</p></div>
+        </div>
+      </section>
+
+      <div class="controls">
+        <button id="global-toggle" type="button" disabled>Chargement…</button>
+        <button id="reload" class="secondary" type="button" disabled>Recharger la page</button>
+      </div>
+      <p id="message" class="feedback" role="status" aria-live="polite"></p>
+
+      <section class="features" aria-labelledby="features-title">
+        <h2 id="features-title">Protection de ce site</h2>
+        <div class="feature">
+          <span class="feature-icon" aria-hidden="true">⊘</span>
+          <div><h3 id="site-name">Chargement…</h3><p id="site-detail"></p></div>
+        </div>
+        <button id="site-toggle" class="secondary" type="button" disabled>Autoriser ce site</button>
+        <details>
+          <summary>Sites autorisés <span id="exception-count">0</span></summary>
+          <ul id="exceptions"></ul>
+        </details>
+      </section>
+
+      <section class="activity" aria-label="Activité sur cet onglet">
+        <div class="metrics">
+          <div><strong id="network-count">—</strong><span>requêtes bloquées</span></div>
+          <div><strong id="hidden-count">—</strong><span>encarts masqués</span></div>
+        </div>
+        <details id="activity-details"><summary>Domaines bloqués</summary><ul id="blocked-domains"></ul></details>
+        <p id="activity-note" class="limits">Depuis le chargement de la page.</p>
+      </section>
+
+      <p class="limits">Les encarts reconnus sont masqués. Certaines publicités peuvent passer ; les images explicites ne sont pas analysées.</p>
+      <p id="filter-info" class="limits"></p>
+    </main>
+
+    <footer><a href="diagnostics.html" target="_blank" rel="noopener">Vérifier le blocage</a><a href="about.html" target="_blank" rel="noopener">Sources et vie privée</a><span>v0.5.0</span></footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

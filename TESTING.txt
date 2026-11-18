@@ -1,0 +1,44 @@
+Addblock 0.5.0 — Chromium tests
+
+Requirements: Node.js 20 or later, npm, and Python 3.10 or later.
+
+From the addblock directory:
+  npm ci
+  npx playwright install chromium
+  npm test
+
+On Linux, Chromium may require additional system libraries:
+  npx playwright install-deps chromium
+
+Tests use a temporary Chromium profile separate from your personal profile.
+The domains used by test pages and scripts resolve to a local server.
+No real advertisements are loaded from the internet.
+
+network.cjs checks network requests, normal content, pause, exceptions,
+persistence, and the built-in diagnostics.
+popups.cjs covers 28 scenarios: unwanted windows, links, buttons, forms,
+sign-in flows, downloads, keyboard actions, frames, and exceptions.
+cosmetics.cjs checks hiding, false positives, restoration, and the session log.
+test_filters.py validates blocklist conversion.
+demo.cjs checks the local demonstration included with the project.
+
+Tests cover controlled scenarios. They do not measure the blocking rate
+across the web.
+
+Pop-up protection limitations:
+- Known advertising destinations come from rules/advertising.json.
+- An explicit button may open a destination that is not in the list.
+- A legitimate window opened long after a click may be blocked; allowing
+  the site restores its behavior.
+- Redirects within the current tab are not handled. Cosmetic filtering
+  only hides recognized ad placements; generic overlays may remain.
+- JavaScript interception shares the page's environment: a hostile site
+  can attempt to bypass it. This is not a security boundary.
+- Configuration arrives asynchronously during loading; the page's earliest
+  instructions may execute before it is applied.
+
+The code was developed for this project without importing files from
+sarthak-here/addblocker. The tests were also written specifically for Addblock.
+
+release.cjs tests the extracted distribution ZIP with debug feedback omitted.
+test_release.py checks bundled links, deterministic archives and excluded files.

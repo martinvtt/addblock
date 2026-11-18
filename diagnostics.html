@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Addblock — Vérification du moteur</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body class="diagnostics">
+    <h1>Vérifier le blocage</h1>
+    <p>Ces tests demandent au moteur de Chrome quelles règles correspondent à des requêtes simulées. Aucun site publicitaire n’est contacté et aucun réglage n’est modifié.</p>
+    <p>Activez la protection pour vérifier les blocages. Les exceptions existantes sont également testées.</p>
+    <button id="run" type="button">Lancer les vérifications</button>
+    <ol id="results" aria-live="polite"></ol>
+    <p>Disponible pour l’extension chargée en mode développeur. Pour vérifier une requête réelle, ouvrez les outils de développement d’un site (F12), onglet Réseau, puis rechargez-le : les requêtes bloquées apparaissent avec <code>ERR_BLOCKED_BY_CLIENT</code>. Désactivez les autres bloqueurs pendant la comparaison.</p>
+    <script type="module" src="diagnostics.js"></script>
+  </body>
+</html>
